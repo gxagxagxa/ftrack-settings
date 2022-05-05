@@ -11,7 +11,7 @@ class FtrackSettings(BaseSettings):
     FTRACK_EVENT_PLUGIN_PATH: Optional[Union[List, str]]
     FTRACK_API_SCHEMA_CACHE_PATH: Optional[str]
     HTTP_PROXY: Optional[AnyHttpUrl]
-    HTTP_PROXY: Optional[AnyHttpUrl]
+    HTTPS_PROXY: Optional[AnyHttpUrl]
 
     @validator('FTRACK_EVENT_PLUGIN_PATH', pre=True)
     def split_str_to_list(cls, v, config, field):
